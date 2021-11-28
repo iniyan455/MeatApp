@@ -53,3 +53,18 @@ In domain layer we only define our interface of repo and override in data layer
 dto - is data transfer object basically abstract that api returns 
 
 we need lider models comes into domain layer models we show to ui 
+
+
+
+Application architecture defines the way we develop, test, scale and maintain our application. Good architecture allows you to easily adopt to constantly changing requirements and protects you from breaking existing functionalities. 
+
+Generally in Clean, code is separated into layers in an onion shape with one dependency rule: The inner layers should not know anything about the outer layers. Meaning that the dependencies should point inwards.
+
+
+
+Outer: Implementation layer
+Middle: Interface adapter layer
+Inner: Business logic layer
+The implementation layer is where everything framework specific happens. Framework specific code includes every line of code that is not solving the problem you set to solve, this includes all Android stuff like creating activities and fragments, sending intents, and other framework code like networking code and databases.
+The purpose of the interface adapter layer is to act as a connector between your business logic and framework specific code.
+The most important layer is the business logic layer. This is where you actually solve the problem you want to solve building your app. This layer does not contain any framework specific code and you should be able to run it without an emulator. This way you can have your business logic code that is easy to test, develop and maintain. That is the main benefit of the Clean Architecture.

@@ -12,9 +12,20 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
-            <option value="$PROJECT_DIR$/data" />
-            <option value="$PROJECT_DIR$/domain" />
-            <option value="$PROJECT_DIR$/presentation" />
+            <option value="$PROJECT_DIR$/buildSrc" />
+            <option value="$PROJECT_DIR$/common" />
+            <option value="$PROJECT_DIR$/common/cache" />
+            <option value="$PROJECT_DIR$/common/network" />
+            <option value="$PROJECT_DIR$/common/remoteconfig" />
+            <option value="$PROJECT_DIR$/common/resources" />
+            <option value="$PROJECT_DIR$/common/usermanager" />
+            <option value="$PROJECT_DIR$/common/utilities" />
+            <option value="$PROJECT_DIR$/feature" />
+            <option value="$PROJECT_DIR$/feature/user" />
+            <option value="$PROJECT_DIR$/feature/user/home" />
+            <option value="$PROJECT_DIR$/feature/user/onboarding" />
+            <option value="$PROJECT_DIR$/feature/user/profile" />
+            <option value="$PROJECT_DIR$/navigation" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

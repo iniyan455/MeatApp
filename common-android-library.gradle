@@ -1,0 +1,95 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'dagger.hilt.android.plugin'
+
+//apply plugin: 'kotlin-android-extensions'
+
+
+android {
+    compileSdkVersion DefaultConfig.compileSdk
+
+    defaultConfig {
+        minSdkVersion DefaultConfig.minSdk
+        targetSdkVersion DefaultConfig.targetSdk
+        versionCode Releases.versionCode
+        versionName Releases.versionName
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+
+    buildFeatures {
+        viewBinding = true
+    }
+
+
+    buildTypes {
+        buildType.javaCompileOptions.annotationProcessorOptions.arguments =
+                [
+                        logEpoxyTimings              : "false",
+                        enableParallelEpoxyProcessing: "true",
+                        validateEpoxyModelUsage      : String.valueOf(buildType.name == 'debug')
+                ]
+
+        debug {
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile("proguard-android.txt"), "$rootDir/app/proguard-rules.pro"
+        }
+    }
+
+    kapt {
+        correctErrorTypes = true
+    }
+
+}
+
+dependencies {
+    implementation Libs.kotlin_stdlib_jdk7
+
+    // Coroutines
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.1'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.1'
+
+    // Coroutine Lifecycle Scopes
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0"
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.4.0"
+
+    //Dagger - Hilt
+    implementation "com.google.dagger:hilt-android:2.38.1"
+    kapt "com.google.dagger:hilt-android-compiler:2.37"
+
+    implementation "androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha03"
+    kapt "androidx.hilt:hilt-compiler:1.0.0"
+
+    kapt Libs.epoxy_processor
+    api Libs.glide
+    api Libs.mavericks
+    api Libs.core_ktx
+    api Libs.material
+    api Libs.appcompat
+    api Libs.constraintlayout
+    api Libs.recyclerview
+    api Libs.swiperefreshlayout
+    api Libs.epoxy
+    api Libs.lottie
+
+    testImplementation Libs.junit
+    testImplementation Libs.mockk
+    implementation Libs.timber
+
+
+}
+
