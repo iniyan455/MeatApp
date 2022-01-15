@@ -4,5 +4,5 @@ dependencies {
     implementation Libs.appcompat
     implementation Libs.mavericks
     implementation Libs.com_google_android_play_core
-    implementation 'com.airbnb.android:mavericks:2.2.0'
+    implementation 'com.airbnb.android:mavericks:2.4.0'
 }

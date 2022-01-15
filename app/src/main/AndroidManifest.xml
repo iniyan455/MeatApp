@@ -14,7 +14,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Meat">
         <activity
-            android:name=".presentation.ui.SplashActivity"
+            android:name=".presentation.ui.IntroActivity"
+            android:theme="@style/Theme.App.Starting">
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

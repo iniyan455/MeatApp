@@ -1,0 +1,32 @@
+// List Release Configuration Dependencies
+
+project.afterEvaluate {
+    tasks.create("dependency-size-release") {
+        configurations.each {
+            if (it.isCanBeResolved() && it.name.contains("ReleaseCompileClasspath")) {
+                listConfigurationDependencies(it)
+            }
+        }
+    }
+}
+
+def listConfigurationDependencies(Configuration configuration) {
+    def formatStr = "%,10.2f"
+    def size = configuration.collect { it.length() / (1024 * 1024) }.sum()
+    def out = new StringBuffer()
+
+    out << "\nConfiguration Name: \"${configuration.name}\"\n"
+    if (size) {
+        out << 'Total Dependencies Size:'.padRight(65)
+        out << "${String.format(formatStr, size)} MB\n\n"
+
+        configuration.sort { -it.length() }
+                .each {
+                    out << "${it.name}".padRight(65)
+                    out << "${String.format(formatStr, (it.length() / 1024))} KB\n"
+                }
+    } else {
+        out << 'No Dependencies Found.'
+    }
+    println(out)
+}
