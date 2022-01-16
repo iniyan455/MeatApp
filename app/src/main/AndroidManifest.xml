@@ -16,7 +16,7 @@
         android:theme="@style/Theme.Meat"
         tools:replace="android:allowBackup">
         <activity
-            android:name=".SplashScreenActivity"
+            android:name=".SplashActivity"
             android:theme="@style/Theme.Meat"
             android:exported="true">
             <intent-filter>

@@ -43,22 +43,14 @@ R
 "feature/user/onboarding/.gitignore,f/c/fc1f55b4a33d17c41b0c473f8887c645117c46dc
 Z
 *feature/user/onboarding/consumer-rules.pro,6/c/6ca896468aa8b4c9326c58ad95545be68a9249dc
-a
-1feature/user/profile/src/main/AndroidManifest.xml,7/d/7d4dfb748e3ef239435e15993cd309e7ac7c93b3
-^
-.feature/user/home/src/main/AndroidManifest.xml,6/4/64fd6d99e81e58cce6b9969dea0bba8802b7c24f
 x
 Hfeature/user/profile/src/test/java/com/iniyan/profile/ExampleUnitTest.kt,d/5/d550aea6b576b9451c920c1c8f5d7c65f7a158df
 á
 Wfeature/user/profile/src/androidTest/java/com/iniyan/profile/ExampleInstrumentedTest.kt,9/c/9c75f5b93302d3951946d96759d2423b20d1a832
-x
-Hfeature/user/profile/src/main/java/com/iniyan/profile/ProfileActivity.kt,1/4/143a56bd5d22c9a7a37f385abdf2053c24dbb1f2
 L
 feature/user/home/.gitignore,8/2/82d6391dfd94a7112962e7ee3f3d61cffe7ba1b4
 T
 $feature/user/home/proguard-rules.pro,3/7/375d932235778dabf528651caf1d899d44a616a3
-d
-4feature/user/onboarding/src/main/AndroidManifest.xml,c/5/c5b97dc6570e2b5604ff202c5e39e459ad5e2a7d
 Å
 Qfeature/user/home/src/androidTest/java/com/iniyan/home/ExampleInstrumentedTest.kt,d/4/d4af58175541c287b05bc66cf13f3c739acbbcb0
 o
