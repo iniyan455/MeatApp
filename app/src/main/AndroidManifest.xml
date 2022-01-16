@@ -17,11 +17,10 @@
         tools:replace="android:allowBackup">
         <activity
             android:name=".SplashActivity"
-            android:theme="@style/Theme.Meat"
+            android:theme="@style/Theme.Splash"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

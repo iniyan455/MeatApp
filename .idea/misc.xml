@@ -6,6 +6,8 @@
         <entry key="app/src/main/res/drawable/baby_icon.xml" value="0.159375" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.37604166666666666" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.37604166666666666" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.3861538461538462" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.159375" />
         <entry key="common/resources/src/main/res/drawable/ic_intro.xml" value="0.159375" />
         <entry key="common/resources/src/main/res/drawable/ic_logo.xml" value="0.3921875" />
         <entry key="common/resources/src/main/res/drawable/ic_zoneout.xml" value="0.159375" />
