@@ -1,9 +1,7 @@
 apply from: "$rootDir/common-android-library.gradle"
 
 dependencies {
-    api project(Modules.usermanager)
-    api project(Modules.navigation)
-    api project(Modules.resources)
+    api project(Modules.datastore)
     api project(Modules.utilties)
 
     testImplementation Libs.mockk

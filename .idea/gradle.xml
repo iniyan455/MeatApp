@@ -7,25 +7,24 @@
         <option name="testRunner" value="GRADLE" />
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="gradleJvm" value="11" />
+        <option name="gradleJvm" value="azul-15" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/buildSrc" />
             <option value="$PROJECT_DIR$/common" />
-            <option value="$PROJECT_DIR$/common/cache" />
+            <option value="$PROJECT_DIR$/common/base" />
+            <option value="$PROJECT_DIR$/common/core" />
+            <option value="$PROJECT_DIR$/common/datastore" />
+            <option value="$PROJECT_DIR$/common/firebase" />
             <option value="$PROJECT_DIR$/common/network" />
-            <option value="$PROJECT_DIR$/common/remoteconfig" />
-            <option value="$PROJECT_DIR$/common/resources" />
-            <option value="$PROJECT_DIR$/common/usermanager" />
             <option value="$PROJECT_DIR$/common/utilities" />
             <option value="$PROJECT_DIR$/feature" />
             <option value="$PROJECT_DIR$/feature/user" />
             <option value="$PROJECT_DIR$/feature/user/home" />
             <option value="$PROJECT_DIR$/feature/user/onboarding" />
             <option value="$PROJECT_DIR$/feature/user/profile" />
-            <option value="$PROJECT_DIR$/navigation" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

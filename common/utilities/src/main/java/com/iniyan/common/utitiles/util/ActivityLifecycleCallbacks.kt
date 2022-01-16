@@ -5,7 +5,6 @@ import android.app.Application
 import android.content.pm.ActivityInfo
 import android.os.Bundle
 import com.airbnb.lottie.BuildConfig
-import com.iniyan.navigation.core.ContainerActivity
 import timber.log.Timber
 
 class ActivityLifecycleCallbacks : Application.ActivityLifecycleCallbacks {
@@ -39,7 +38,7 @@ class ActivityLifecycleCallbacks : Application.ActivityLifecycleCallbacks {
 }
 
 private fun Activity.log(lifecycle: String) = javaClass.canonicalName!!.let {
-    if (it.contains(ContainerActivity::class.java.name).not()) Timber.tag(it).i(lifecycle)
+    //if (it.contains(MainAc::class.java.name).not()) Timber.tag(it).i(lifecycle)
 }
 
 private fun Activity.allowDebugRotation() {

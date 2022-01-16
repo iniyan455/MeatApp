@@ -3,7 +3,7 @@ package com.iniyan.meat
 import android.app.Application
 import com.airbnb.mvrx.Mavericks
 import com.airbnb.mvrx.MavericksViewModelConfigFactory
-import com.iniyan.cache.CacheLibrary
+import com.iniyan.usermanager.CacheLibrary
 import timber.log.Timber
 import com.iniyan.common.utitiles.util.*
 import dagger.hilt.android.HiltAndroidApp

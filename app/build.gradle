@@ -96,21 +96,19 @@ android {
 dependencies {
 
     implementation 'androidx.core:core-ktx:1.7.0'
-    implementation 'androidx.appcompat:appcompat:1.4.0'
-    implementation 'com.google.android.material:material:1.4.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.2'
+    implementation 'androidx.appcompat:appcompat:1.4.1'
+    implementation 'com.google.android.material:material:1.5.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
 
-    implementation project(Modules.navigation)
+//    implementation project(Modules.navigation)
     implementation project(Modules.utilties)
-    implementation project(Modules.resources)
     implementation project(Modules.network)
-    implementation project(Modules.remoteconfig)
-    implementation project(Modules.cache)
+    implementation project(Modules.firebase)
 
     implementation project(Modules.onboarding)
     implementation project(Modules.home)
     implementation project(Modules.profile)
-    implementation project(Modules.usermanager)
+    implementation project(Modules.datastore)
 
     // compose
     implementation "androidx.compose.ui:ui:$compose_version"

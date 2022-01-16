@@ -7,26 +7,10 @@ s
 Capp/src/androidTest/java/com/iniyan/meat/ExampleInstrumentedTest.kt,a/9/a9f2cdcbe571fb1ef1e5ba48098ced3812e2992e
 d
 4app/src/test/java/com/iniyan/meat/ExampleUnitTest.kt,c/1/c183cf57d4ec0a6a88c69d5f1e55af39864da2b8
-y
-Inavigation/src/main/java/com/iniyan/navigation/features/HomeNavigation.kt,2/9/29e28c3d4a06fa906f805b4e3683b1f8698b9f81
-|
-Lnavigation/src/main/java/com/iniyan/navigation/features/ProfileNavigation.kt,3/2/32bf63de9c18fbbaed7453d3d74947da70b40df3
-
-Onavigation/src/main/java/com/iniyan/navigation/features/OnboardingNavigation.kt,6/9/69607153142863ce5628f47a261a79ccde955a72
 e
 5app/src/main/java/com/iniyan/meat/data/network/Api.kt,1/a/1ad08ad10a9e6d56bdf4eed88c45f7f6a22e66aa
-C
-buildSrc/.gitignore,2/2/22163f12ca562d4b53ce3f8d6a0cbd595fd4d0a1
-Œ
-\common/utilities/src/main/java/com/iniyan/common/utitiles/util/ActivityLifecycleCallbacks.kt,6/3/63404c840c7ee1cb85b2d719d6f5ccf7c823d245
-
-Onavigation/src/main/java/com/iniyan/navigation/extensions/FragmentExtensions.kt,b/6/b67ef0757bd6da20d9a9e330fc0c5beaa03ee9f4
-x
-Hnavigation/src/main/java/com/iniyan/navigation/core/ContainerActivity.kt,8/7/87583df4635d757cf8b91cdd7f63020b6bc48143
 Œ
 \common/utilities/src/main/java/com/iniyan/common/utitiles/util/FragmentLifecycleCallbacks.kt,9/1/91bd2ff4f306f3191b140948ab041dae38fdf641
-y
-Inavigation/src/main/java/com/iniyan/navigation/core/NavigatorArguments.kt,b/5/b5e92d4a512c834f72473a684cdd845b82df9453
 U
 %common/usermanager/consumer-rules.pro,f/3/f3974646662bf766538d11a8d765f3332e3a142f
 v
@@ -41,10 +25,6 @@ _
 /common/usermanager/src/main/AndroidManifest.xml,a/0/a0b6d103b95a3d33674824164c7fc535b89fbcf8
 M
 common/usermanager/.gitignore,e/0/e026d7de58380ad49f21db86de179bd7d2eb6e5c
-d
-4common/cache/src/main/java/com/iniyan/cache/Cache.kt,8/a/8a1e5d1643e367060e262af0833b7361c1628b53
-k
-;common/cache/src/main/java/com/iniyan/cache/CacheLibrary.kt,0/7/075bab5016bf4887e6e287942887319b6ebf5acc
 M
 navigation/proguard-rules.pro,a/8/a875eca7f117b25b2845aaf177e81b459fa65bd8
 M
@@ -59,28 +39,12 @@ x
 Hcommon/utilities/src/main/java/com/iniyan/common/utitiles/util/Status.kt,8/3/83e7bb986e7b9edaa69ca6016a6b8064a7b82fd8
 €
 Pnavigation/src/androidTest/java/com/iniyan/navigation/ExampleInstrumentedTest.kt,f/8/f85c1f6ea794d68082d50605c982a6cda6ea8008
-j
-:common/network/src/main/java/com/iniyan/network/Network.kt,4/2/42393eae3a0a30dc87a523f585cbac47179a7f29
-X
-(app/src/main/java/com/iniyan/meat/App.kt,0/3/03eec380c9de808d718b1f858ffbbfa3c92aa74e
-p
-@navigation/src/main/java/com/iniyan/navigation/core/Navigator.kt,9/6/96e6d79b9905a4c293ff850d17d235b31f65d067
 T
 $buildSrc/src/main/kotlin/Releases.kt,9/0/90da09fdeb6822287242f20c5e0db31c282e607e
-t
-Dnavigation/src/main/java/com/iniyan/navigation/core/ClassRegistry.kt,6/b/6b69dc5a236caf18aba58409e5ab60f70cdbed81
-P
- buildSrc/src/main/kotlin/Libs.kt,e/9/e9d78a4d98854247532ab6e0a00fa572b36ee871
-S
-#buildSrc/src/main/kotlin/Modules.kt,9/8/9838349f15f060c03457518e2b77bc6242a79db5
-z
-Japp/src/main/java/com/iniyan/meat/data/repository/UserInfoRepositoyImpl.kt,c/b/cb27c334f7b3373edec20de0ec3ae0d124bba64e
 Q
 !common/network/consumer-rules.pro,a/5/a5c25d34ab38ffb90ff4949b76aa189d774c28c3
 Q
 !common/network/proguard-rules.pro,9/5/95430ad6af4eb7748f84ef23154b5821bb54a5c5
-{
-Kcommon/utilities/src/main/java/com/iniyan/common/utitiles/util/Constants.kt,b/c/bc23815b987f03af965e350a37a04c335c344434
 |
 Lcommon/utilities/src/test/java/com/iniyan/common/utitiles/ExampleUnitTest.kt,d/1/d1e032574b6ee05f2e61c681fd5d08204485a08f
 ‹
@@ -149,8 +113,6 @@ d
 4feature/user/onboarding/src/main/AndroidManifest.xml,c/5/c5b97dc6570e2b5604ff202c5e39e459ad5e2a7d
 Y
 )common/cache/src/main/AndroidManifest.xml,8/4/84077f37d4a37b32bc58bd8710def03bad8969b0
-G
-common/cache/.gitignore,5/b/5b42d2ff81420870c0ce8d015440633216ef1251
 
 Qfeature/user/home/src/androidTest/java/com/iniyan/home/ExampleInstrumentedTest.kt,d/4/d4af58175541c287b05bc66cf13f3c739acbbcb0
 o
@@ -169,39 +131,11 @@ K
 common/utilities/.gitignore,f/0/f008ee16707f65086057b20bf66ab700dfa040be
 n
 >common/cache/src/test/java/com/iniyan/cache/ExampleUnitTest.kt,0/f/0fc2a008273757f241f06f2bdbf09ee0191b1dce
-O
-buildSrc/src/main/kotlin/App.kt,4/e/4e8878a52cc07d9698100b17062d5e998d7dce68
-T
-$buildSrc/src/main/kotlin/Versions.kt,d/f/df7250bdfd4d4cbe77a1ebc3b950afc6e6bcfecd
-O
-common/cache/consumer-rules.pro,0/2/02db84e3b94b1de779ffdc74ac586506a86da312
-O
-common/cache/proguard-rules.pro,6/a/6a89bfe492c6f61647dcecf3cf4c34a12d75a42b
-i
-9app/src/main/java/com/iniyan/meat/data/dto/UserInfoDto.kt,7/9/7954f91ce0c1758decf6b9e29128a6ee71b0a050
-…
-Ucommon/utilities/src/main/java/com/iniyan/common/utitiles/ui/base/ViewModelFactory.kt,9/8/989ce4f2da79e9e570a8286a487ae0fc272fe5a5
-I
-buildSrc/build.gradle.kts,d/9/d90b697280fada81e52ec92d24725920f1cb087b
-I
-common/cache/build.gradle,a/4/a4b2367cbce3ed7771a902e2c80259d836639005
 K
 common/network/build.gradle,e/4/e498a7d55aedb18b2f5657724caea248de459794
 P
  common/remoteconfig/build.gradle,c/f/cfd7c1b62ef470d11bafc9565c870d65ca302f02
 M
 common/resources/build.gradle,4/5/45bb5f59572a448c2f088666e9370ab1d07a76c9
-O
-common/usermanager/build.gradle,9/f/9f8a30299437899db3a8b544702073b96058b42f
-N
-feature/user/home/build.gradle,8/e/8e45eea6e5753fb286bf31342c6a3578b89fcd89
-M
-common/utilities/build.gradle,6/1/61158a328ab6b2a738c446de33d25ed6b8789f04
-Q
-!feature/user/profile/build.gradle,6/d/6d8bbe4050147573270966b443572fc8d32e5d4c
-j
-:app/src/main/java/com/iniyan/meat/domain/model/UserInfo.kt,5/f/5fa1c9ae9e57e7b570b18ee3c0f07a01798ac2a1
-o
-?app/src/main/java/com/iniyan/meat/domain/model/UserInfoState.kt,f/f/ff47fbaeb523ca17f469ff23cf10fe9cbcf47b50
 y
 Iapp/src/main/java/com/iniyan/meat/domain/repository/UserInfoRepository.kt,d/4/d41b77d5914f435b9baedce8d14315e68292a694

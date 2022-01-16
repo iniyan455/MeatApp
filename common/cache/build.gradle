@@ -1,7 +1,0 @@
-apply from: "$rootDir/common-android-library.gradle"
-
-
-dependencies {
-//    implementation Libs.rxpaper2
-   implementation 'io.github.pilgr:paperdb:2.7.1'
-}
