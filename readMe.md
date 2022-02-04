@@ -147,3 +147,43 @@ Here are some useful Gradle/adb commands for executing this example:
 ./gradlew installDebug - Install the debug apk on the current connected device.
 ./gradlew runUnitTests - Execute domain and data layer tests (both unit and integration).
 ./gradlew runAcceptanceTests - Execute espresso and instrumentation acceptance tests.
+
+
+
+
+
+Notification - module 80k
+
+# Requirements
+1. Splash Screen
+2. Intro screen for 3 slide slide carousel - ignore 
+3. Home Screen with Navigation Component 
+4. Slide View carousel with image timer - ingore 
+5. RecyclerView Dynamic Module Add  - ImageView, Name and Offer  - Ex:- mutton egg chicken
+   
+Home module 
+Location search add address - api 
+ grid view with card item contains image , Text -> if we click each item it will navigate to details screen 
+-> In Details screen contain all list of item related to category , Tool bar search option , Image, Text , description , Add to card (or) + 1 - 
+
+
+6. Ad banner below in home screen - ignore 
+7. bottom navigation - Home , Cart , Order
+   
+8. Icon for Account - to see Payment history and location choose and based on location 
+   we cant show app to proceed to order any food
+
+
+Same Login -> owner, delivery, user
+1. delivery boy login  - List of order requested (current month) - Pending state, Processing State, Done state -  click and update delivery status based on location
+
+
+Admin Login -
+1. All features of delivery boy with filter all month data
+2. Add module for delivery boy and delete and update delivery boy details.
+3. Add Category List of Menu update image and name.
+4. Add List of items in Menu update items add image price ,discount, quantity
+5. App config for disable app immediately. and timing to deliver
+
+Payment Gateway RazorPay implementation for user 
+
