@@ -11,18 +11,19 @@ import java.io.IOException
 import javax.inject.Inject
 
 class GetUserInfoUseCase @Inject constructor(
-    private val userInfoRepository : UserInfoRepository
+    private val userInfoRepository: UserInfoRepository
 ) {
     /** We want to emit multiple values over a period of time for loading usecases we need to emit status - success,failure */
-    operator fun invoke() : Flow<Resource<List<UserInfo>>> = flow {
+    operator fun invoke(): Flow<Resource<List<UserInfo>>> = flow {
         try {
             emit(Resource.Loading(null))
             val userInfo = userInfoRepository.getUserInfo().map { it.toUserInfo() }
             emit(Resource.Success(userInfo))
-        } catch (e : HttpException) {
-           emit(Resource.Error(e.localizedMessage ?: "An unexpected error occured", null))
-        } catch (e : IOException) {
-           emit(Resource.Error("Could n't reach server. Check your internet connection",null))
+        } catch (e: HttpException) {
+            emit(Resource.Error(e.localizedMessage ?: "An unexpected error occured", null))
+        } catch (e: IOException) {
+            emit(Resource.Error("Could n't reach server. Check your internet connection", null))
         }
     }
 }
+
