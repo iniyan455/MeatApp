@@ -7,4 +7,5 @@ dependencies {
     api Libs.retrofit_gson
     implementation Libs.retrofit_okhttp
     implementation Libs.retrofit_interceptor
+    api project(Modules.utilties)
 }
