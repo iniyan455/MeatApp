@@ -44,6 +44,7 @@ dependencies {
     implementation project(Modules.onboarding)
     implementation project(Modules.home)
     implementation project(Modules.profile)
+    implementation project(Modules.datastore)
 }
 
 

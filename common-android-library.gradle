@@ -21,12 +21,12 @@ android {
     }
 
     kotlinOptions {
-        jvmTarget = rootProject.ext.java_version.toString()
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
         useIR = true
     }
 
     composeOptions {
-        kotlinCompilerExtensionVersion = rootProject.ext.compose_version.toString()
+        kotlinCompilerExtensionVersion = App.compose_version.toString()
     }
 
     buildFeatures {
