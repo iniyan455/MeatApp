@@ -227,5 +227,5 @@ object Libs {
     const val compose_tooling = "androidx.compose.ui:ui-tooling:" + Versions.compose_version
     const val activity_compose = "androidx.activity:activity-compose:" + Versions.activity_compose
 
-    const val paper_db = "io.github.pilgr:paperdb:2.7.1:" + Versions.paper_db
+    const val paper_db = "io.github.pilgr:paperdb:" + Versions.paper_db
 }
