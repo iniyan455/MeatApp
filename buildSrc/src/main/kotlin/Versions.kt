@@ -11,6 +11,7 @@ import kotlin.String
  */
 object Versions {
     const val com_squareup_retrofit2: String = "2.9.0"
+    const val com_squareup_okhttp: String = "5.0.0-alpha.3"
 
     const val org_jetbrains_kotlin: String = "1.5.0"
 
@@ -24,7 +25,7 @@ object Versions {
 
     const val swiperefreshlayout: String = "1.1.0"
 
-    const val constraintlayout: String = "2.0.4"
+    const val constraintlayout: String = "2.1.3"
 
     const val epoxy_processor: String = "4.5.0"
 
@@ -32,11 +33,11 @@ object Versions {
 
     const val lint_gradle: String = "27.1.3"
 
-    const val appcompat: String = "1.3.0-rc01"
+    const val appcompat: String = "1.4.1"
 
-    const val core_ktx: String = "1.6.0-alpha03"
+    const val core_ktx: String = "1.7.0"
 
-    const val material: String = "1.3.0"
+    const val material: String = "1.5.0"
 
     const val rxpaper2: String = "1.6.0"
 
@@ -57,4 +58,28 @@ object Versions {
     const val mockk: String = "1.11.0"
 
     const val mavericks: String = "2.2.0"
+
+    const val coroutines: String = "1.6.0"
+
+    const val lifecycle: String = "2.4.1"
+
+    const val hilt_version: String = "2.40.2"
+
+    const val hilt_compiler: String = "1.0.0"
+
+    const val hilt_viewmodel: String = "1.0.0-alpha03"
+
+    const val compose_navigation: String = "1.0.0"
+
+    const val gif: String = "1.2.17"
+
+    const val junit_ext: String = "1.1.3"
+
+    const val compose_version: String = "1.2.0-alpha06"
+
+    const val expresso: String = "3.4.0"
+
+    const val activity_compose: String = "1.4.0"
+
+    const val paper_db: String = "2.7.1"
 }

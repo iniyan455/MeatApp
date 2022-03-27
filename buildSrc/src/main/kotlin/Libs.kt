@@ -11,103 +11,112 @@ object Libs {
      * https://github.com/square/retrofit
      */
     const val converter_moshi: String = "com.squareup.retrofit2:converter-moshi:" +
-            Versions.com_squareup_retrofit2
+        Versions.com_squareup_retrofit2
 
     /**
      * https://github.com/square/retrofit
      */
     const val retrofit: String = "com.squareup.retrofit2:retrofit:" +
-            Versions.com_squareup_retrofit2
+        Versions.com_squareup_retrofit2
+
+    const val retrofit_gson: String = "com.squareup.retrofit2:converter-gson:" +
+        Versions.com_squareup_retrofit2
+
+    const val retrofit_okhttp: String = "com.squareup.okhttp3:okhttp:" +
+        Versions.com_squareup_okhttp
+
+    const val retrofit_interceptor: String = "com.squareup.okhttp3:logging-interceptor:" +
+        Versions.com_squareup_okhttp
 
     /**
      * https://github.com/square/moshi/
      */
     const val moshi: String = "com.squareup.moshi:moshi:" +
-            Versions.moshi
+        Versions.moshi
 
     /**
      * https://github.com/square/moshi/
      */
     const val moshi_codegen: String = "com.squareup.moshi:moshi-kotlin-codegen:" +
-            Versions.moshi
+        Versions.moshi
 
     /**
      * https://kotlinlang.org/
      */
     const val kotlin_android_extensions: String =
-            "org.jetbrains.kotlin:kotlin-android-extensions:" + Versions.org_jetbrains_kotlin
+        "org.jetbrains.kotlin:kotlin-android-extensions:" + Versions.org_jetbrains_kotlin
 
     /**
      * https://kotlinlang.org/
      */
     const val kotlin_android_extensions_runtime: String =
-            "org.jetbrains.kotlin:kotlin-android-extensions-runtime:" +
+        "org.jetbrains.kotlin:kotlin-android-extensions-runtime:" +
             Versions.org_jetbrains_kotlin
 
     /**
      * https://kotlinlang.org/
      */
     const val kotlin_annotation_processing_gradle: String =
-            "org.jetbrains.kotlin:kotlin-annotation-processing-gradle:" +
+        "org.jetbrains.kotlin:kotlin-annotation-processing-gradle:" +
             Versions.org_jetbrains_kotlin
 
     /**
      * https://kotlinlang.org/
      */
     const val kotlin_gradle_plugin: String = "org.jetbrains.kotlin:kotlin-gradle-plugin:" +
-            Versions.org_jetbrains_kotlin
+        Versions.org_jetbrains_kotlin
 
     /**
      * https://kotlinlang.org/
      */
     const val kotlin_scripting_compiler_embeddable: String =
-            "org.jetbrains.kotlin:kotlin-scripting-compiler-embeddable:" +
+        "org.jetbrains.kotlin:kotlin-scripting-compiler-embeddable:" +
             Versions.org_jetbrains_kotlin
 
     /**
      * https://kotlinlang.org/
      */
     const val kotlin_stdlib_jdk7: String = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:" +
-            Versions.org_jetbrains_kotlin
+        Versions.org_jetbrains_kotlin
 
     /**
      * https://developer.android.com/studio
      */
     const val com_android_tools_build_gradle: String = "com.android.tools.build:gradle:" +
-            Versions.com_android_tools_build_gradle
+        Versions.com_android_tools_build_gradle
 
     const val com_google_android_play_core: String = "com.google.android.play:core:" +
-            Versions.com_google_android_play_core
+        Versions.com_google_android_play_core
 
     /**
      * https://square.github.io/okhttp/
      */
     const val logging_interceptor: String = "com.squareup.okhttp3:logging-interceptor:" +
-            Versions.logging_interceptor
+        Versions.logging_interceptor
 
     /**
      * http://github.com/square/leakcanary/
      */
     const val leakcanary_android: String = "com.squareup.leakcanary:leakcanary-android:" +
-            Versions.leakcanary_android
+        Versions.leakcanary_android
 
     /**
      * https://developer.android.com/jetpack/androidx
      */
     const val swiperefreshlayout: String = "androidx.swiperefreshlayout:swiperefreshlayout:" +
-            Versions.swiperefreshlayout
+        Versions.swiperefreshlayout
 
     /**
      * http://tools.android.com
      */
     const val constraintlayout: String = "androidx.constraintlayout:constraintlayout:" +
-            Versions.constraintlayout
+        Versions.constraintlayout
 
     /**
      * https://github.com/airbnb/epoxy
      */
     const val epoxy_processor: String = "com.airbnb.android:epoxy-processor:" +
-            Versions.epoxy_processor
+        Versions.epoxy_processor
 
     /**
      * https://github.com/airbnb/mvrx
@@ -165,6 +174,7 @@ object Libs {
      * https://github.com/bumptech/glide
      */
     const val glide: String = "com.github.bumptech.glide:glide:" + Versions.glide
+    const val glide_compiler: String = "com.github.bumptech.glide:compiler:" + Versions.glide
 
     /**
      * http://junit.org
@@ -180,4 +190,42 @@ object Libs {
      * https://github.com/airbnb/mavericks
      */
     const val mavericks: String = "com.airbnb.android:mavericks:" + Versions.mavericks
+
+    /**
+     * Coroutines
+     */
+    const val coroutines_core: String = "org.jetbrains.kotlinx:kotlinx-coroutines-core:" + Versions.coroutines
+    const val coroutines_android: String = "org.jetbrains.kotlinx:kotlinx-coroutines-android:" + Versions.coroutines
+
+    /**
+     * Coroutines Lifecycle Scopes
+     */
+    const val lifecycle_viewmodel: String = "androidx.lifecycle:lifecycle-viewmodel-ktx:" + Versions.lifecycle
+    const val lifecycle_runtime: String = "androidx.lifecycle:lifecycle-runtime-ktx:" + Versions.lifecycle
+
+    /**
+     * Dagger - Hilt
+     */
+    const val dagger_hilt: String = "com.google.dagger:hilt-android:" + Versions.hilt_version
+    const val dagger_kapt_runtime: String = "com.google.dagger:hilt-android-compiler:" + Versions.hilt_version
+
+    const val dagger_hilt_lifecycle: String = "androidx.hilt:hilt-lifecycle-viewmodel:" + Versions.hilt_viewmodel
+    const val dagger_kapt_compiler: String = "androidx.hilt:hilt-compiler:" + Versions.hilt_compiler
+
+    const val compose_navigation = "androidx.hilt:hilt-navigation-compose:" + Versions.compose_navigation
+    const val gif = "pl.droidsonroids.gif:android-gif-drawable:" + Versions.gif
+
+    const val junit_ext = "androidx.test.ext:junit:" + Versions.junit_ext
+    const val expresso = "androidx.test.espresso:espresso-core:" + Versions.expresso
+
+    const val compose_ui = "androidx.compose.ui:ui:" + Versions.compose_version
+    const val compose_material = "androidx.compose.material:material:" + Versions.compose_version
+
+    const val compose_preview = "androidx.compose.ui:ui-tooling-preview:" + Versions.compose_version
+    const val compose_junit = "androidx.compose.ui:ui-test-junit4:" + Versions.compose_version
+
+    const val compose_tooling = "androidx.compose.ui:ui-tooling:" + Versions.compose_version
+    const val activity_compose = "androidx.activity:activity-compose:" + Versions.activity_compose
+
+    const val paper_db = "io.github.pilgr:paperdb:2.7.1:" + Versions.paper_db
 }

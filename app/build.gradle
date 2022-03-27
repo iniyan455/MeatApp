@@ -2,10 +2,8 @@ plugins {
     id 'com.android.application'
 }
 
+apply from: rootProject.file("build-types.gradle")
 apply from: rootProject.file("common-android-library.gradle")
-
-def properties = new Properties()
-properties.load(rootProject.file('local.properties').newDataInputStream())
 
 android {
     compileSdk DefaultConfig.compileSdk
@@ -25,60 +23,27 @@ android {
     }
 
 
-    signingConfigs {
-        release {
-            keyAlias properties['keyAlias']
-            keyPassword properties['keyPassword']
-            storeFile file(properties['storeFile'])
-            storePassword properties['storePassword']
-        }
-        stage {
-            keyAlias properties['keyAlias']
-            keyPassword properties['keyPassword']
-            storeFile file(properties['storeFile'])
-            storePassword properties['storePassword']
-        }
-    }
-
-
-    buildFeatures {
-        buildConfig = true
-        viewBinding = true
-    }
-
     buildTypes {
+        release {
+            proguardFiles getDefaultProguardFile("proguard-android.txt"), "$rootDir/app/proguard-rules.pro"
+        }
         stage {
-            minifyEnabled true
-            shrinkResources true
-            debuggable true
-            applicationIdSuffix '.stage'
-            //ext.enableCrashlytics = true
-            buildConfigField "boolean", "IS_PROD", "false"
-            //resValue "string", "app_version", "${defaultConfig.versionName} (build ${defaultConfig.versionCode} .stage)"
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile("proguard-android.txt"), "$rootDir/app/proguard-rules.pro"
 
         }
-        release {
-            minifyEnabled true
-            shrinkResources true
-            //ext.enableCrashlytics = true
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            signingConfig signingConfigs.release
+        minifiedDebug {
+            proguardFiles getDefaultProguardFile("proguard-android.txt"), "$rootDir/app/proguard-rules.pro"
         }
     }
 }
 
 dependencies {
-    implementation project(Modules.utilties)
+    implementation Libs.kotlin_stdlib_jdk7
     implementation project(Modules.network)
     implementation project(Modules.firebase)
     implementation project(Modules.onboarding)
     implementation project(Modules.home)
     implementation project(Modules.profile)
-    implementation Libs.kotlin_stdlib_jdk7
-    implementation project(Modules.datastore)
 }
 
 
-apply from: '../module-size.gradle'

@@ -1,4 +1,5 @@
 apply from: "$rootDir/android-library-commons.gradle"
 
 dependencies {
+    implementation project(Modules.network)
 }

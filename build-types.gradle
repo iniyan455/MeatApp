@@ -1,0 +1,37 @@
+def properties = new Properties()
+properties.load(rootProject.file('local.properties').newDataInputStream())
+
+apply from: rootProject.file("siging-configs.gradle")
+apply from: rootProject.file("product-flavours.gradle")
+
+android {
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+        }
+        stage {
+            minifyEnabled true
+            debuggable true
+            shrinkResources true
+            signingConfig signingConfigs.debug
+            applicationIdSuffix '.stage'
+        }
+        minifiedDebug {
+            shrinkResources false
+            minifyEnabled false
+            debuggable true
+            signingConfig signingConfigs.debug
+            applicationIdSuffix '.minifiedDebug'
+        }
+    }
+
+    productFlavors {
+        production {
+            signingConfig signingConfigs.release
+        }
+        develop {
+            signingConfig signingConfigs.debug
+        }
+    }
+}

@@ -3,6 +3,8 @@ apply plugin: 'kotlin-kapt'
 apply plugin: 'dagger.hilt.android.plugin'
 apply plugin: 'kotlin-parcelize'
 
+apply from: rootProject.file("product-flavours.gradle")
+
 android {
     compileSdkVersion DefaultConfig.compileSdk
 
@@ -39,22 +41,27 @@ android {
         }
     }
 
+
     buildTypes {
-        buildType.javaCompileOptions.annotationProcessorOptions.arguments =
-                [
-                        logEpoxyTimings              : "false",
-                        enableParallelEpoxyProcessing: "true",
-                        validateEpoxyModelUsage      : String.valueOf(buildType.name == 'stage')
-                ]
-
-        stage {
-            minifyEnabled true
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-        }
-
         release {
-            minifyEnabled true
-            proguardFiles getDefaultProguardFile("proguard-android.txt"), "$rootDir/app/proguard-rules.pro"
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            buildConfigField("int", "VERSION_CODE", "${defaultConfig.versionCode}")
+            buildConfigField("String","VERSION_NAME","\"${defaultConfig.versionName}\"")
+        }
+        stage {
+            ext.enableCrashlytics = false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            buildConfigField("int", "VERSION_CODE", "${defaultConfig.versionCode}")
+            buildConfigField("String","VERSION_NAME","\"${defaultConfig.versionName}\"")
+            //resValue "string", "app_version", "${defaultConfig.versionName} (build ${defaultConfig.versionCode} .stage)"
+
+        }
+        minifiedDebug {
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            buildConfigField("int", "VERSION_CODE", "${defaultConfig.versionCode}")
+            buildConfigField("String","VERSION_NAME","\"${defaultConfig.versionName}\"")
+            //resValue "string", "app_version", "${defaultConfig.versionName} (build ${defaultConfig.versionCode} .minifiedDebug)"
+
         }
     }
 
@@ -66,63 +73,50 @@ android {
 
 dependencies {
 
-    implementation 'androidx.core:core-ktx:1.7.0'
-    implementation 'androidx.appcompat:appcompat:1.4.1'
-    implementation 'com.google.android.material:material:1.5.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
+    implementation Libs.core_ktx
+    implementation Libs.appcompat
+    implementation Libs.material
+    implementation Libs.constraintlayout
 
     // Coroutines
-    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.0'
-    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.0'
+    implementation Libs.coroutines_core
+    implementation Libs.coroutines_android
 
     // Coroutine Lifecycle Scopes
-    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1"
-    implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.4.1"
+    implementation Libs.lifecycle_viewmodel
+    implementation Libs.lifecycle_runtime
 
     //Dagger - Hilt
-    implementation "com.google.dagger:hilt-android:2.40.2"
-    kapt "com.google.dagger:hilt-android-compiler:2.40.2"
-    implementation "androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha03"
-    kapt "androidx.hilt:hilt-compiler:1.0.0"
+    implementation Libs.dagger_hilt
+    kapt Libs.dagger_kapt_runtime
+    implementation Libs.dagger_hilt_lifecycle
+    kapt Libs.dagger_kapt_compiler
 
     // compose
-    implementation "androidx.compose.ui:ui:$compose_version"
-    implementation "androidx.compose.material:material:$compose_version"
-    implementation "androidx.compose.ui:ui-tooling-preview:$compose_version"
-    androidTestImplementation "androidx.compose.ui:ui-test-junit4:$compose_version"
-    debugImplementation "androidx.compose.ui:ui-tooling:$compose_version"
+    implementation Libs.compose_ui
+    implementation Libs.material
+    implementation Libs.compose_preview
+    androidTestImplementation Libs.compose_junit
+    debugImplementation Libs.compose_tooling
+    implementation Libs.activity_compose
 
-    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation Libs.compose_navigation
 
-    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.4.1'
-    implementation 'androidx.activity:activity-compose:1.4.0'
+    implementation Libs.lottie
 
-    kapt Libs.epoxy_processor
-    api Libs.glide
-    api Libs.mavericks
-    api Libs.core_ktx
-    api Libs.material
-    api Libs.appcompat
-    api Libs.constraintlayout
-    api Libs.recyclerview
-    api Libs.swiperefreshlayout
-    api Libs.epoxy
-    api Libs.lottie
+    implementation Libs.glide
+    kapt Libs.glide_compiler
+
+    // Gif image Drawables
+    implementation Libs.gif
 
     testImplementation Libs.junit
     testImplementation Libs.mockk
+
+    androidTestImplementation Libs.junit_ext
+    androidTestImplementation Libs.expresso
+
     implementation Libs.timber
-
-    implementation 'com.github.bumptech.glide:glide:4.12.0'
-    kapt 'com.github.bumptech.glide:compiler:4.12.0'
-
-    implementation 'androidx.hilt:hilt-navigation-compose:1.0.0'
-    // Gif image Drawables
-    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.17'
-
-   debugImplementation Libs.leakcanary_android
-
-    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    debugImplementation Libs.leakcanary_android
 }
 

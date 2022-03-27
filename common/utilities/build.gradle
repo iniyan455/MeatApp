@@ -1,5 +1,6 @@
 apply from: "$rootDir/android-library-commons.gradle"
 
-dependencies {
 
+dependencies {
+    api project(Modules.datastore)
 }

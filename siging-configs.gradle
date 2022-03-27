@@ -1,0 +1,19 @@
+def properties = new Properties()
+properties.load(rootProject.file('local.properties').newDataInputStream())
+
+android {
+    signingConfigs {
+        release {
+            keyAlias properties['keyAlias']
+            keyPassword properties['keyPassword']
+            storeFile file(properties['storeFile'])
+            storePassword properties['storePassword']
+        }
+        stage {
+            keyAlias properties['keyAlias']
+            keyPassword properties['keyPassword']
+            storeFile file(properties['storeFile'])
+            storePassword properties['storePassword']
+        }
+    }
+}

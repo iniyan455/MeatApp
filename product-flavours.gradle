@@ -1,0 +1,14 @@
+android {
+    flavorDimensions "build"
+    productFlavors {
+        production {
+            dimension "build"
+            buildConfigField "boolean", "IS_PROD", "false"
+        }
+        develop {
+            dimension "build"
+            buildConfigField "boolean", "IS_PROD", "false"
+        }
+    }
+}
+

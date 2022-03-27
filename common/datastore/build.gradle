@@ -1,5 +1,6 @@
 apply from: "$rootDir/android-library-commons.gradle"
 
+
 dependencies {
-    implementation 'io.github.pilgr:paperdb:2.7.1'
+    implementation Libs.paper_db
 }
