@@ -18,9 +18,9 @@
 
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
-#-renamesourcefileattribute SourceFile
+-renamesourcefileattribute SourceFile
 
-#-keepattributes SourceFile,LineNumberTable
+-keepattributes SourceFile,LineNumberTable
 -renamesourcefileattribute SourceFile
 -repackageclasses com.example.dev
 -allowaccessmodification
@@ -48,9 +48,6 @@
 # Firebase
 -keep class com.google.android.gms.** { *; }
 -keep class com.google.firebase.** { *; }
-
-#Just Pay
--keep class in.juspay.** {*;}
 
 # OkHttp
 -keepattributes Signature
@@ -162,19 +159,6 @@
 
 -dontwarn com.android.installreferrer
 
-#AppsFlyer
--keep class com.appsflyer.**{*;}
--dontwarn com.appsflyer.**
-
-#otto
--keep class com.rapido.passenger.otto.*{*;}
--keepclassmembers class ** {
-    @org.greenrobot.eventbus.Subscribe public *;
-}
-
-#ProtoBuf
--keep class com.rapido.passenger.pojo.protobuffmessages.*{*;}
-
 # Webview
 -keepclassmembers class * {
     @android.webkit.JavascriptInterface <methods>;
@@ -189,14 +173,6 @@
 -keepattributes JavascriptInterface
 -keepattributes *Annotation*
 
--dontwarn com.razorpay.**
--keep class com.razorpay.** {*;}
-
--optimizations !method/inlining/*
-
--keepclasseswithmembers class * {
-  public void onPayment*(...);
-}
 
 # Remove logs, don't forget to use 'proguard-android-optimize.txt' file in build.gradle
 -assumenosideeffects class android.util.Log {
@@ -219,23 +195,6 @@
 # Keep Native codes
 -keepclasseswithmembernames class * { native <methods>; }
 
-#For UXCam
--keep class com.uxcam.** { *; }
--dontwarn com.uxcam.**
-
-#For Hansel
--dontwarn io.hansel.**
--keep class io.hansel.**{*;}
--keep class * implements io.hansel.**.* {*;}
--keep class * extends io.hansel.**.* {*;}
--keep class com.netcore.views.** { *; }
-
-
-#Databinding
--keepclassmembers class * extends android.app.Activity {
-     public void *(android.view.View);
- }
-
 #ViewModel
 -keep class * extends androidx.lifecycle.AndroidViewModel {
     <init>(android.app.Application);
@@ -254,10 +213,6 @@
 -keep class androidx.** { *; }
 -keep interface androidx.** { *; }
 
-
-#RxJava
--dontwarn sun.misc.**
-
 -keepclassmembers class rx.internal.util.unsafe.*ArrayQueue*Field* {
    long producerIndex;
    long consumerIndex;
@@ -267,63 +222,15 @@
 -dontwarn rx.**
 -dontnote rx.internal.util.PlatformDependent
 
-# Event Bus
--keepattributes *Annotation*
--keepclassmembers class ** {
-    @org.greenrobot.eventbus.Subscribe <methods>;
-}
--keep enum org.greenrobot.eventbus.ThreadMode { *; }
-
-# Only required if you use AsyncExecutor
--keepclassmembers class * extends org.greenrobot.eventbus.util.ThrowableFailureEvent {
-    <init>(java.lang.Throwable);
-}
-
-#Sqllite
--keep class org.sqlite.** { *; }
--keep class org.sqlite.database.** { *; }
-
-#Dagger2
--keep class com.google.errorprone.annotations.** { *; }
-
-# ProtoBuf
--keep public class * extends com.google.protobuf.GeneratedMessageLite {*;}
-
-# ServiceLoader support
--keepnames class kotlinx.coroutines.internal.MainDispatcherFactory {}
--keepnames class kotlinx.coroutines.CoroutineExceptionHandler {}
--keepnames class kotlinx.coroutines.android.AndroidExceptionPreHandler {}
--keepnames class kotlinx.coroutines.android.AndroidDispatcherFactory {}
-
--keep class kotlinx.coroutines.internal.MainDispatcherFactory {}
--keep class kotlinx.coroutines.CoroutineExceptionHandler {}
--keep class kotlinx.coroutines.android.AndroidExceptionPreHandler {}
--keep class kotlinx.coroutines.android.AndroidDispatcherFactory {}
 
 # Most of volatile fields are updated with AFU and should not be mangled
 -keepclassmembernames class kotlinx.** {
     volatile <fields>;
 }
 
-# Guava
--dontwarn com.google.**
--dontwarn javax.inject.**
--dontwarn sun.misc.Unsafe
--dontwarn com.google.common.collect.MinMaxPriorityQueue
--dontwarn java.lang.ClassValue
--dontwarn com.google.j2objc.annotations.Weak
--dontwarn org.codehaus.mojo.animal_sniffer.IgnoreJRERequirement
--dontwarn afu.org.checkerframework.**
--dontwarn org.checkerframework.**
-
 # Parceler library
 -keep public class com.google.android.gms.common.internal.safeparcel.SafeParcelable {
     public static final *** NULL;
-}
-
--keepnames @com.google.android.gms.common.annotation.KeepName class *
--keepclassmembernames class * {
-    @com.google.android.gms.common.annotation.KeepName *;
 }
 
 -keepnames class * implements android.os.Parcelable {
@@ -335,23 +242,12 @@
 -dontwarn com.google.android.gms.**
 -dontwarn org.conscrypt.**
 
-
--keep public class com.google.android.gms.** { *; }
-
-# Clevertap
--dontwarn com.clevertap.android.sdk.**
-
-
 # ExoPlayer
 -keep class com.google.android.exoplayer2.ext.av1.** { *; }
 -dontnote com.google.android.exoplayer2.ext.av1.Libgav1VideoRenderer
 -keepclassmembers class com.google.android.exoplayer2.ext.av1.Libgav1VideoRenderer {
   <init>(long, android.os.Handler, com.google.android.exoplayer2.video.VideoRendererEventListener, int);
 }
--keep class com.samsung.** { *; }
--dontwarn com.samsung.**
--dontwarn com.samsung.multiscreen.BuildConfig
--dontwarn lombok.**
 
 #Map
 -keep class com.google.maps.api.android.** {*;}

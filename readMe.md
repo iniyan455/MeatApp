@@ -156,16 +156,16 @@ Notification - module 80k
 
 # Requirements
 1. Splash Screen
-2. Intro screen for 3 slide slide carousel - ignore 
+2. Intro screen for 3 slide slide carousel
 3. Home Screen with Navigation Component 
-4. Slide View carousel with image timer - ingore 
+4. Slide View carousel with image timer
 5. RecyclerView Dynamic Module Add  - ImageView, Name and Offer  - Ex:- mutton egg chicken
-   
+
+
 Home module 
 Location search add address - api 
  grid view with card item contains image , Text -> if we click each item it will navigate to details screen 
 -> In Details screen contain all list of item related to category , Tool bar search option , Image, Text , description , Add to card (or) + 1 - 
-
 
 6. Ad banner below in home screen - ignore 
 7. bottom navigation - Home , Cart , Order
@@ -186,4 +186,16 @@ Admin Login -
 5. App config for disable app immediately. and timing to deliver
 
 Payment Gateway RazorPay implementation for user 
+
+
+1. buildTypes - proguard enabled and disabled , staging and production, prod flavour and new manifest and application class for each
+2. Gradle cleanups
+3. Version update
+4. using one common place
+5. light common
+6. heavy weight
+7. Dagger implementation
+8. DI implementation
+9. network setup
+10.
 
